@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Bryan Leung</string>
+    <string name="firstLine">This is an app made by this beautiful specimen</string>
+    <string name="aboutBryan">About</string>
+    <string name="contactSocial">Hit me up</string>
+    <string name="placesVisited">Where I\'ve been</string>
+</resources>

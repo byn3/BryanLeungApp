@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:onClick="AboutMe">
+
+            <ImageView
+                style="@style/iconView"
+                android:id="@+id/firstIcon"
+                android:layout_weight="5"
+                android:src="@drawable/stickfigure"
+                android:background="@color/red" />
+
+            <TextView
+                style="@style/listView"
+                android:background="@color/red"
+                android:id="@+id/firstList"
+                android:text="@string/aboutBryan"
+                android:layout_weight="10"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            ></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:onClick="PlacesVisited">
+
+        <ImageView
+            style="@style/iconView"
+            android:id="@+id/secondIcon"
+            android:layout_weight="5"
+            android:src="@drawable/mountain"
+            android:background="@color/orange"
+            />
+
+        <TextView
+            style="@style/listView"
+            android:background="@color/orange"
+            android:id="@+id/secondList"
+            android:text="@string/placesVisited"
+            android:layout_weight="10"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            ></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:onClick="ContactSocial">
+
+            <ImageView
+                style="@style/iconView"
+                android:id="@+id/thirdIcon"
+                android:layout_weight="5"
+                android:src="@drawable/contact"
+                android:background="@color/yellow"
+                />
+
+            <TextView
+                style="@style/listView"
+                android:background="@color/yellow"
+                android:id="@+id/thirdList"
+                android:text="@string/contactSocial"
+                android:layout_weight="10"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            ></View>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

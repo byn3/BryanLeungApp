@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.bryanleung.BryanLeung"
+    android:background="@color/colorBackground">
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="295dp"
+        android:layout_height="33dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:id="@+id/firstLine"
+        android:text="@string/firstLine"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/firstPhoto"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/firstPhoto"
+        android:layout_width="370dp"
+        android:layout_height="441dp"
+        app:srcCompat="@drawable/bryan"
+        app:layout_constraintTop_toBottomOf="@+id/firstLine"
+        android:rotation="-90"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="47dp" />
+
+</android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>
