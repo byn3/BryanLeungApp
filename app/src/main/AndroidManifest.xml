@@ -19,6 +19,7 @@
         <activity android:name=".AboutMe" />
         <activity android:name=".PlacesVisited" />
         <activity android:name=".ContactSocial"/>
+        <activity android:name=".GamesPlayed"/>
         <activity
             android:name=".SnakeActivity"
             android:screenOrientation="landscape"

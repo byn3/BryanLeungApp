@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.bryanleung.GamesPlayed"
     android:padding="8dp"
-    android:id="@+id/gamesPlayedXML"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/gamesPlayedXML">
+
 
 </ListView>
