@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.Toast;
-
 import static com.example.android.bryanleung.R.layout.bryanleung;
 import static java.security.AccessController.getContext;
 
@@ -32,5 +32,13 @@ public class BryanLeung extends AppCompatActivity {
         Intent i=new Intent(this, PlacesVisited.class);
         startActivity(i);
     }
-
+    public void GamesPlayed(View view) {
+        Intent i = new Intent(this, GamesPlayed.class);
+        startActivity(i);
+    }
+    public void SnakeActivity(View view) {
+        Intent i = new Intent(this, SnakeActivity.class);
+        startActivity(i);
+    }
 }
+//fix the constraint layouts and start working on the xml and activities of the other apps. do features.

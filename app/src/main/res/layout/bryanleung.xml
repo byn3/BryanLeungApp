@@ -1,105 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.bryanleung.BryanLeung"
+    >
+
+    <TextView
+        android:id="@+id/openingLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/openingLineHome" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/openingLine"
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
+            style="@style/newButtonBox"
+            android:background="@color/red"
             android:onClick="AboutMe">
 
             <ImageView
-                style="@style/iconView"
                 android:id="@+id/firstIcon"
-                android:layout_weight="5"
-                android:src="@drawable/stickfigure"
-                android:background="@color/red" />
+                style="@style/iconView"
+                android:src="@drawable/stickfigure" />
 
             <TextView
-                style="@style/listView"
-                android:background="@color/red"
                 android:id="@+id/firstList"
-                android:text="@string/aboutBryan"
-                android:layout_weight="10"/>
+                style="@style/listView"
+                android:text="@string/aboutBryan" />
 
         </LinearLayout>
 
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:background="@android:color/darker_gray"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            ></View>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:onClick="PlacesVisited">
-
-        <ImageView
-            style="@style/iconView"
-            android:id="@+id/secondIcon"
-            android:layout_weight="5"
-            android:src="@drawable/mountain"
-            android:background="@color/orange"
-            />
-
-        <TextView
-            style="@style/listView"
-            android:background="@color/orange"
-            android:id="@+id/secondList"
-            android:text="@string/placesVisited"
-            android:layout_weight="10"/>
-
-        </LinearLayout>
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:background="@android:color/darker_gray"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            ></View>
+        <View style="@style/lineDivider"></View>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
+            style="@style/newButtonBox"
+            android:background="@color/orange"
+            android:onClick="PlacesVisited">
+
+            <ImageView
+                android:id="@+id/secondIcon"
+                style="@style/iconView"
+                android:src="@drawable/mountain" />
+
+            <TextView
+                android:id="@+id/secondList"
+                style="@style/listView"
+                android:text="@string/placesVisited" />
+
+        </LinearLayout>
+
+        <View style="@style/lineDivider"></View>
+
+        <LinearLayout
+            style="@style/newButtonBox"
+            android:background="@color/yellow"
             android:onClick="ContactSocial">
 
             <ImageView
-                style="@style/iconView"
                 android:id="@+id/thirdIcon"
-                android:layout_weight="5"
-                android:src="@drawable/contact"
-                android:background="@color/yellow"
-                />
+                style="@style/iconView"
+                android:src="@drawable/contact" />
 
             <TextView
-                style="@style/listView"
-                android:background="@color/yellow"
                 android:id="@+id/thirdList"
-                android:text="@string/contactSocial"
-                android:layout_weight="10"/>
+                style="@style/listView"
+                android:text="@string/contactSocial" />
 
         </LinearLayout>
 
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:background="@android:color/darker_gray"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            ></View>
+        <View style="@style/lineDivider"></View>
+
+        <LinearLayout
+            style="@style/newButtonBox"
+            android:background="@color/green"
+            android:onClick="GamesPlayed">
+
+            <ImageView
+                android:id="@+id/fourthIcon"
+                style="@style/iconView"
+                android:src="@drawable/computer" />
+
+            <TextView
+                android:id="@+id/fourthList"
+                style="@style/listView"
+                android:text="@string/gamesPlayed" />
 
 
+        </LinearLayout>
+
+        <View style="@style/lineDivider"></View>
+
+        <LinearLayout
+            style="@style/newButtonBox"
+            android:background="@color/blue"
+            android:onClick="SnakeActivity">
+
+            <ImageView
+                android:id="@+id/fifthIcon"
+                style="@style/iconView"
+                android:src="@drawable/snake" />
+
+            <TextView
+                android:id="@+id/fifthList"
+                style="@style/listView"
+                android:text="@string/playSnake" />
+
+
+        </LinearLayout>
+
+        <View style="@style/lineDivider"></View>
     </LinearLayout>
 
 </RelativeLayout>

@@ -2,6 +2,116 @@
     <string name="app_name">Bryan Leung</string>
     <string name="firstLine">This is an app made by this beautiful specimen</string>
     <string name="aboutBryan">About</string>
-    <string name="contactSocial">Hit me up</string>
-    <string name="placesVisited">Where I\'ve been</string>
+    <string name="contactSocial">Contact me</string>
+    <string name="placesVisited">Places I\'ve been</string>
+    <string name="gamesPlayed">Games I play</string>
+    <string name="playSnake">Play Snake</string>
+
+    <string name="openingLineHome">This app was made to exercise my self-taught skills, practice clean code, and design patterns.</string>
+    <string name="whatIWantToLearn">
+        Implement APIs \n
+        The many widgets Android offers\n
+        Libraries\n
+        Architectures\n
+        To fully understand the Android life cycle and fragments\n
+        The exception cases and how to get around them\n
+        How to work remotely and get contract work\n
+        To 100 percent all the free courses on codecademy so I learn basics of everything\n
+        Fluency in Java and Python\n
+    </string>
+    <string name="dreamCompanyToWorkFor">
+        \t\tI\'m looking for an opportunity where I can grow.
+        Where my boss is respectable, knowledgeable, and well-communicated.
+        A workplace where I am a valued asset.
+        A company that invests in me and believes in my abilities.
+        One that when I look back every year, I can notice my skills as a developer improve.
+        A fine work and life balance plus great coworkers is the dream.
+        Sends me off to conventions, conferences, hackathons, and work related events.
+        Puts an emphasis on continued education and the latest tech.
+        Has a few company and team bonding events.
+        Tasty and healthy food.
+    </string>
+    <string name="aboutBryanBodyText">
+        \t\tMy name is Bryan Leung.
+        I am self taught and aspiring to become an Android Developer.
+        I am a University of California, Santa Cruz graduate.
+        I have a B.S. in Human Biology.
+        After numerous years of science classes, hospital shadowing, internships, and medical work experience, I am making a career change out of science and health care.
+        Now I am focusing on my quarter life crisis, which is a career change into the tech field.\n\n
+
+        \t\tHow do I learn and what resources do I use?
+        I use online resources to learn something everyday:
+        Udacity, Udemy, Codecademy, Youtube, Blogs, Google/Android developer sites, Reddit, stackoverflow, etc.\n\n
+
+
+        \t\tWhat am I doing while self teaching?
+         I have filled the role of a stay at home mom but without the kid or the ring or the female role.
+        Yes, that was supposed to be a joke.
+        I meal prep for two, act as a six-star personal driver, and take care of highly dependent woman, who is getting her doctorate degree.
+        I worked since high school and still have the student work permit to prove my early work ethic.
+        I have had numerous other jobs since, mostly in food or customer service to help pay for college.\n\n
+
+         \t\tWith my free time and when I am not studying, I indulge in my hobbies.
+        I play PC games with my friends. I snowboard in the winter. I eat large proportioned meals.
+        I slow cook ribs over hours and have meat that falls off the bone.
+        After peaking at 230 pounds, I started exercising more and my goal is to stay sub 200s and healthy.
+        I hike long distances for decent scenic views or for the Pokemon Go gyms.
+        My personality or role is not static, but rather dynamic and versatile.
+        I can be an introvert support in the back or the extrovert  head of the team.
+        I am a great vacation planner as well as an open-minded and spontaneous person.
+        I prefer clean and tidy but will get my hands dirty to do some manual labor if need be.
+        I enjoy learning about mostly everything: politics, tech, science, the economy, current events, and local issues.\n\n
+
+        \t\tDuring college I had many internships in the fields of construction, public health, medical, and education.
+        After college I had a job at IHSS, now knows as Homebridge, working as a caregiver.
+        I looked after many clients with many different ailments, physical and mental.
+        While working, I volunteered, shadowed a orthopedic surgeon, and studied for the MCAT.
+        I applied to medical school but am not pursuing that path anymore.
+        Looking back, I know that I went in for the wrong reasons and I believe others do deserved it more.
+        I am grateful for the many dozens of people who have helped me.
+        My volunteer experiences vary from animal shelters, tutoring, and wildlife restoration.
+        I paid off my student loans and have no debt.
+        I also traveled to a few countries, attended weddings, and spent a few months with my ailing grandpa in China.\n\n
+
+        \t\tThe bottom of each section will describe major parts and concepts of Android that I have implemented.
+        As a reminder, this is one of my first personal apps and I am constantly learning.
+        Thank you.\n\n
+
+        \t\tThis page covers scroll view and nice string aesthetics.
+        And because the home activity did not have this bottom description, due to design reasons, I will list it here.
+        The home page covers Linear and Relative Layouts as well as onClick() buttons.
+        I also show my use of clean code and practiced it in the XML values folder: colors, styles, strings.
+        I kept hardcoding to a minimum and I have registered an id for all the views so that methods can act or call them.
+        There is also a little welcome toast message that pops up when the app boots up. If you found this app through the Google play store,
+        then that means I have learned how to follow the guidelines and publish an app.\n
+    </string>
+
+
+    <string name="entertainingStory">
+         \t\tI will now entertain you with a story and how I imagine my life plan:
+        While learning Java and Android, I create this decent app that acts like an extremely personal profile page.
+        You somehow stumble on this. You are reading this, it impresses you, you like me, and you find me ambitious and driven.
+        You want to give me a chance.
+        You get me started off with an internship or temporary job at your company.
+        Months go by and no one has a problem with me.
+        My performance is satisfactory and I am reliable.
+        You agree that my personality is a perfect fit for the company culture.
+        Now it is the nearing the end of my internship, I receive an offer.
+        I start off as a junior developer and after a few years and an open position, a senior.
+        More positions open up and that I am interested in.
+        I get promoted to Team manager or an administration position.
+        You have noticed my leadership skills and important inputs after several more years.
+        Eventually I am on the board of the company.
+        The project that I started on has grown exponentially.
+        You retire and at that going away party, you find that I have bought you life time tickets to that thing you love.
+        I now reveal to everyone at that party that I will be taking over as chief executive (insert letter).
+        Everyone is happy and the company is a success all thanks to you and me.
+        Wow that was a great and entertaining story huh?
+        A bit dramatized but that makes it more fun which engages you.
+        Do you know how hard it is these days to keep people reading?
+        Lots of short attention spans, instant gratification behaviors, and lack of intractability in this text string,
+        and I still have you hooked and reading =).
+        The moral to this story is that I am a decent person and you are interested in me because no one reads this far down
+        and is not wanting to see me.\n
+    </string>
 </resources>
