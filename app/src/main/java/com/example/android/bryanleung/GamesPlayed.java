@@ -1,12 +1,16 @@
 package com.example.android.bryanleung;
 
-import android.app.ListActivity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ArrayAdapter;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import static android.support.v7.widget.AppCompatDrawableManager.get;
 
 /**
  * Created by Byn on 7/24/2017.
@@ -25,26 +29,38 @@ public class GamesPlayed extends AppCompatActivity{
         //creates array of businesses/ companies that owned the games I played
         //usually write down the parent company, importance relevant
 
-        ArrayList<String> games= new ArrayList<>();
-        games.add("Activision/Blizzard");
-        games.add("Supercell");
-        games.add("Wizet/Nexon");
-        games.add("Softnyx");
-        games.add("Square Enix");
-        games.add("Nintendo");
-        games.add("Mojang");
-        games.add("NCsoft/ArenaNet");
-        games.add("Steam/too many to name");
-        games.add("Tencent/Riot Games");
-        games.add("Zynga");
+        ArrayList<Game> gamesPlayed= new ArrayList<>();
 
 
-        ArrayAdapter<String> gamesAdapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, games);
+        gamesPlayed.add(new Game("Blizzard",R.mipmap.blizzard));
+        gamesPlayed.add(new Game("Supercell",R.mipmap.supercell));
+        gamesPlayed.add(new Game("Wizet",R.mipmap.wizet));
+        gamesPlayed.add(new Game("Softnyx",R.mipmap.softnyx));
+        gamesPlayed.add(new Game("Square Enix",R.mipmap.squareenix));
+        gamesPlayed.add(new Game("Nintendo",R.mipmap.nintendo));
+        gamesPlayed.add(new Game("Mojang",R.mipmap.mojang));
+        gamesPlayed.add(new Game("ArenaNet",R.mipmap.arenanet));
+        gamesPlayed.add(new Game("Valve",R.mipmap.valve));
+        gamesPlayed.add(new Game("Riot Games",R.mipmap.riotgames));
+        gamesPlayed.add(new Game("Zynga",R.mipmap.zynga));
+        gamesPlayed.add(new Game("Activision",R.mipmap.activision));
+        gamesPlayed.add(new Game("Nexon",R.mipmap.nexon));
+        gamesPlayed.add(new Game("Tencent",R.mipmap.tencent));
+
+
+
+
+        GameAdapter adapter= new GameAdapter(this, gamesPlayed);
+
         ListView listView= (ListView) findViewById(R.id.gamesPlayedXML);
-        listView.setAdapter(gamesAdapter);
+        listView.setAdapter(adapter);
+
+
+
     }
+
 }
+
 
 //Deals with arraylist and a while loop
 //I practiced how to make the UI and xml layouts with java

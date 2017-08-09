@@ -1,15 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.bryanleung.ContactSocial">
+    tools:context="com.example.android.bryanleung.ContactSocial"
+    android:orientation="vertical">
 
 
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="It worked"/>
-</android.support.constraint.ConstraintLayout>
+        android:paddingTop="24dp"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/socialSpinner"
+        android:drawSelectorOnTop="true"
+        android:prompt="@string/contactSocialSpinner">
+    </Spinner>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/belowSpinner"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        >
+    </TextView>
+
+</LinearLayout>
