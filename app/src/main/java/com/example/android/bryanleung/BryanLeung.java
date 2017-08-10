@@ -24,8 +24,8 @@ public class BryanLeung extends AppCompatActivity {
         Intent i=new Intent(this, AboutMe.class);
         startActivity(i);
     }
-    public void ContactSocial(View view){
-        Intent i=new Intent(this, ContactSocial.class);
+    public void CustomSpinner(View view){
+        Intent i=new Intent(this, CustomSpinner.class);
         startActivity(i);
     }
     public void PlacesVisited(View view){

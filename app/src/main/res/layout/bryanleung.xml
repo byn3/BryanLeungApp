@@ -63,7 +63,7 @@
         <LinearLayout
             style="@style/newButtonBox"
             android:background="@color/yellow"
-            android:onClick="ContactSocial">
+            android:onClick="CustomSpinner">
 
             <ImageView
                 android:id="@+id/thirdIcon"
