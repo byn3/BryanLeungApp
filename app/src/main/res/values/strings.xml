@@ -3,8 +3,8 @@
     <string name="firstLine">This is an app made by this beautiful specimen</string>
     <string name="aboutBryan">About</string>
     <string name="contactSocial">Social Media</string>
-    <string name="contactSocialSpinner">Select my social media</string>
-    <string name="placesVisited">Places I\'ve been</string>
+    <string name="contactSocialSpinner">Select My Social Media</string>
+    <string name="placesVisited">Phone Intents</string>
     <string name="gamesPlayed">Games I play</string>
     <string name="playSnake">Play Snake</string>
     <string name="openingLineHome">This app was made to exercise my self-taught skills, practice clean code, and design patterns.</string>
@@ -111,13 +111,39 @@
         and is not intrigued.\n
     </string>
 
+    <string name="phoneIntentEnding">
+        \t\tI learned how to start activities in other apps such as the camera or messaging via implicit intents.
+        The Bryan app will crash if there are no apps that can receive the intent.
+        If you click the last button, you will open an Imgur album of me. I like to make ugly faces and take hideous selfies.
+        I also learned about permissions on Android and how API 23+ needs to request on runtime.
+        I played around with requesting, handling, and checking permissions code from the Android developer site.
+        There were many intermediate concepts and code that I practiced with online but I did not implement those lines of code in this app.
+        I kept this app real basic and minimal so I could focus more on studying DS and Algorithms.
+        With the camera, I learned about making new files to store the images, accessing with a bitmap, and setting them into an image view.
+        The email used is extremely basic and I did not go further into that.
+        The maps taught me about uri and the option of using map URLs versus a Google Maps intent for my intended purpose.
+        The SMS part gave me the longest issues and hardest problems with permissions and API levels.
+        This is where I learned the most and changed my button to instantly send a pre-written string without opening the messaging App.
+        The call button just dials my number and the user has to hit dial.
+        The internet intent opens a page with a few humorous photos of me and their witty description.
+
+    </string>
+
+    <string name="socialMediaEnding">
+        \t\tThe focus of this activity was to learn about custom spinners and apply that knowledge.
+        I followed a tutorial and tweaked parts to fit and to personalize this. I used two xml layouts and 3 Java classes to make this one screen work.
+        In the future I should add a button that starts an intent that opens a web browser when the user selects from the spinner.
+        I make good use of a for loop and an ArrayListAdapter. but also hard coded many strings in here.
+    </string>
+
     <string name="gamesPlayedEnding">
         \t\tThe main focus of this activity page was to make an ArrayList, custom ArrayAdapter,
-    essential java classes for the Adapter, and follow important CS concepts. For example, this page uses view recycling and no loops.
-    Initially, I made a while loop for a LinearLayout and that would have been terrible for memory management and scalability.
-    If this page had thousands of company names (or other data) it would have taken several seconds to load and run out of memory.
-    But by using my Adapter, custom XML layouts, ListView, and recycling, this activity does not and will not strain the device\'s memory.
-    I also learned about design regarding the different Android graphic dimensions (LDPI,HDPI,XHDPI, etc) and mipmap icons."
+        essential java classes for the Adapter, and follow important CS concepts. For example, this page uses view recycling and no loops.
+        Initially, I made a while loop for a LinearLayout and that would have been terrible for memory management and scalability.
+        If this page had thousands of company names (or other data) it would have taken several seconds to load and run out of memory.
+        But by using my Adapter, custom XML layouts, ListView, and recycling, this activity does not and will not strain the device\'s memory.
+        I also learned about design regarding the different Android graphic dimensions (LDPI,HDPI,XHDPI, etc) and mipmap icons.
+        This page, compared to the Social Media page, practices much better coding practices.
     </string>
 
 <string name="whatIWantToLearnAndGetMoreExperienceWith">

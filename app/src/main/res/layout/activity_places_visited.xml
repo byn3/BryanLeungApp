@@ -4,10 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.android.bryanleung.PlacesVisited">
 
+    <Button
+        style="@style/intentButton"
+        android:id="@+id/button1"
+        android:text="Use Camera"
+        android:onClick="buttonClickFunction1"/>
+
+    <Button
+        style="@style/intentButton"
+        android:id="@+id/button2"
+        android:text="Send Email to Me"
+        android:onClick="buttonClickFunction2"/>
+
+    <Button
+        style="@style/intentButton"
+        android:id="@+id/button3"
+        android:text="See What I Live Next To"
+        android:onClick="buttonClickFunction3"/>
+
+    <Button
+        style="@style/intentButton"
+        android:id="@+id/button4"
+        android:text="Send a Text"
+        android:onClick="buttonClickFunction4"/>
+
+    <Button
+        style="@style/intentButton"
+        android:id="@+id/button5"
+        android:text="Call Me And Leave a Voicemail"
+        android:onClick="buttonClickFunction5"/>
+
+    <Button
+        style="@style/intentButton"
+        android:id="@+id/button6"
+        android:text="Use Internet to Open an Imgur Album"
+        android:onClick="buttonClickFunction6"/>
+
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="It this also worksss"/>
+        android:layout_marginTop="20dp"
+        style="@style/intentButton"
+        android:text="@string/phoneIntentEnding" />
+
+    </ScrollView>
 </LinearLayout>

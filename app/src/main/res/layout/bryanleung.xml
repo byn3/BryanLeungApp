@@ -114,10 +114,10 @@
                 style="@style/listView"
                 android:text="@string/playSnake" />
 
-
         </LinearLayout>
 
         <View style="@style/lineDivider"></View>
+
     </LinearLayout>
 
 </RelativeLayout>

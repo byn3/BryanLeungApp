@@ -63,7 +63,7 @@ public class CustomSpinnerAdapter extends ArrayAdapter<String> {
 
         if(position==0){
             //default spinner item
-            socialName.setText("Please select media");
+            socialName.setText("Please Select Media");
             socialURL.setText("");
         }
         else{
