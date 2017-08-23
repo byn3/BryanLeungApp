@@ -8,39 +8,44 @@
     <string name="gamesPlayed">Games I play</string>
     <string name="playSnake">Play Snake</string>
     <string name="openingLineHome">This app was made to exercise my self-taught skills, practice clean code, and design patterns.</string>
-
+    <string name="closingLineHome">
+        If this app was downloaded from the Google Play Store, then I have finished my first project. At this moment I am continuing my studies and focusing on DS and Algos.
+        I will also look into making some REST and CRUD apps to dig into more advanced topics like APIs, networking, and background services.
+    </string>
     <string name="aboutBryanBodyText">
         \t\tThe bottom of each section will describe major parts and concepts of Android that I have implemented into the current screen.\n\n
 
         \t\tMy name is Bryan Leung.
-        I am self taught and using Android to learn about programming and Java.
+        I am self taught and using Android Studio to learn about programming and Java.
         I am a University of California, Santa Cruz graduate.\n\n
 
-        \t\tHow do I learn and what resources do I use?\n
+        \t\tHow do I learn and what resources do I use?\n\n
         I use free online resources to learn a bit everyday:
         Udacity, Udemy, Codecademy, Youtube, Blogs, Google/Android developer site, Reddit, Stack Overflow, etc.\n\n
 
-         \t\tWhat do I do in my free time and when I am not studying?\n
-        My hobbies. I hike long distances for decent scenic views or for Pokemon Go. Ha!
-        That was a semi-joke. I snowboard in the winter.
-        I can slow cook ribs over many hours and have the meat just fall off the bone.
-        I enjoy making days worth of meal prep.
-        I am a heavy gamer, both literally and symbolically.\n\n
+         \t\tWhat do I do in my free time and when I am not studying?\n\n
+        My hobbies are diverse. I hike long distances for scenic views or for Pokemon Go.
+        I snowboard in the winter, avoiding the black diamonds because of fear.
+        I slow cook BBQ ribs over many hours and have the meat fall off the bone.
+        I enjoy meal prepping for my girlfriend and myself.
+        I am a heavy gamer, both literally and symbolically.
+        Also, I am trying to lose some weight. \n\n
 
-        \t\tWhat is my personality like?\n
-        My personality or role is not static, but rather dynamic and versatile.
-        I can be an introvert support in the back or the extrovert star at head of the team.
+        \t\tWhat is my personality like?\n\n
+        My personality is not static, but rather dynamic and versatile.
+        I can be an introvert support player in the back or the extrovert star at head of the team.
         I am a great vacation planner as well as an open-minded and spontaneous person.
         I prefer clean and tidy but will get my hands dirty to do some manual labor if need be.
         I enjoy learning about mostly everything: politics, tech, science, the economy, current events, and local issues.
         For example, my Youtube \"watch it again\" section shows cat videos, anime clips, Primitive Technology\'s videos, Gordon Ramsay cooking,
-        fishing videos, physics phenomena, Insider, AGT, and movie trailers. I can watch almost everything and I know what I do not want to watch. \n\n
+        fishing videos, physics phenomena, Insider, AGT, How It\'s Made, and movie trailers. I can watch almost everything that sparks a bit of curiosity. \n\n
 
-        \t\tSo what are you doing now?\n
-        I paid off my student loans, have no debt, and saved up a lot of money when I was working. I have very, very low spending habits and my financial situation was not dire.
-        Because of this lack of urgency I decided to self teach myself programming and here I am.
-        I am learning CS every day. I am reading CTCI and learning about
-        I also traveled to a few countries, attended weddings, and spent a few months with my ailing grandpa in China.\n\n
+        \t\tSo what are you doing now?\n\n
+        I paid off my student loans, have no debt, and saved up a lot of money from when I was working.
+        My financial situation is not a concern since I have a very rare spending history.
+        Because of this lack of urgency, I decided to self teach myself programming.
+        I am learning CS every day. I am reading CTCI and learning about design.
+        I also traveled, attended weddings, and spent a few months with my ailing grandpa in China.\n\n
 
         \t\tThis page covers scroll view and nice string aesthetics.
         And because the home activity did not have this bottom description, due to design reasons, I will list it here.
@@ -49,33 +54,35 @@
         I kept hardcoding to a minimum and I have registered an id for all the views so that methods can act or call them.
         There is also a little welcome toast message that pops up when the app boots up. If you found this app through the Google play store,
         then that means I have learned how to follow the guidelines and publish an app.  As a reminder, this is one of my first personal apps and I am constantly learning.
-        Thank you\n
+        Thank you.\n\n
     </string>
 
     <string name="hiddenAboutBryanBodyTextPartDos">
 
-        This is all stuff I cut from my original body paragraph but wanted to include it since it still provides more insight but less important, in my opinion.
+        This is all stuff I cut from my original body paragraph but wanted to include it since it still provides more insight.
         I have a B.S. in Human Biology.
         After numerous years of science classes, hospital shadowing, internships, and medical work experience, I am making a career change out of science and health care.
         Now I am focusing on my quarter life crisis, which is a career change into the tech field.
 
-        \t\tWhat am I doing while self teaching?\n
+        \t\tWhat am I doing while self teaching?\n\n
         I have filled the role of a stay at home mom but without the kid or the ring or the female role.
         Yes, that was supposed to be a joke.
         I meal prep for two, act as a six-star personal driver, and take care of highly dependent woman, who is getting her doctorate degree.
         I worked since high school and still have the student work permit to prove my early work ethic.
-        I have had numerous other jobs since, mostly in food or customer service to help pay for college.\n\n
+        Since 16, I have been on a payroll and only recently I have been living as a bum.
+        I have had numerous other jobs, mostly in food or customer service to help pay for college and life.\n\n
 
         After peaking at 230 pounds, I started exercising more and my goal is to stay sub 200s and healthy.
+        I am fluctuating right now at the 210s which doesn\'t seem too bad for a 6 feet guy but I\'d like to look better.
         I am tough on the outside as well as the inside. Growing up, I was used to being bullied, \"walking it off,\"
-        and dealing with life. I run from challenges or struggles. I have my confidence and past to push me through new content ahead of me.
+        and dealing with life. I have my confidence and past to push me through new content ahead of me.
 
-         \t\tDuring college I had many internships in the fields of construction, public health, medical, and education.
+         \t\tDuring college I had many internships in the fields of construction, public health, medicine, and education.
         After college I had a job at IHSS, now knows as Homebridge, working as a caregiver.
-        I looked after many clients with many different ailments, physical and mental.
+        I looked after many clients with many different ailments- physical and mental.
         While working, I volunteered, shadowed a orthopedic surgeon, and studied for the MCAT.
         I applied to medical school but am not pursuing that path anymore.
-        Looking back, I know that I went in for the wrong reasons and I believe others do deserved it more.
+        Looking back, I know that I went in for the wrong reasons and I believe others are better suited.
         I am grateful for the many dozens of people who have helped me.
         My volunteer experiences vary from animal shelters, tutoring, and wildlife restoration.
     </string>
@@ -110,6 +117,12 @@
         The moral to this story is that I am a decent person and you are interested in me because no one reads this far down
         and is not intrigued.\n
     </string>
+    <string name="intentButton1">Use Phone Camera</string>
+    <string name="intentButton2">Send Email to Me</string>
+    <string name="intentButton3">See What I Live Next To</string>
+    <string name="intentButton4">Send an Instant Text</string>
+    <string name="intentButton5">Call Me And Leave a Voicemail</string>
+    <string name="intentButton6">Use Internet to Open an Imgur Album</string>
 
     <string name="phoneIntentEnding">
         \t\tI learned how to start activities in other apps such as the camera or messaging via implicit intents.
@@ -122,10 +135,10 @@
         With the camera, I learned about making new files to store the images, accessing with a bitmap, and setting them into an image view.
         The email used is extremely basic and I did not go further into that.
         The maps taught me about uri and the option of using map URLs versus a Google Maps intent for my intended purpose.
-        The SMS part gave me the longest issues and hardest problems with permissions and API levels.
+        The SMS part gave me issues and problems with permissions and API levels.
         This is where I learned the most and changed my button to instantly send a pre-written string without opening the messaging App.
         The call button just dials my number and the user has to hit dial.
-        The internet intent opens a page with a few humorous photos of me and their witty description.
+        The internet intent opens a page with a few humorous photos of me and their witty description.\n\n
 
     </string>
 
@@ -145,20 +158,24 @@
         I also learned about design regarding the different Android graphic dimensions (LDPI,HDPI,XHDPI, etc) and mipmap icons.
         This page, compared to the Social Media page, practices much better coding practices.
     </string>
+    <string name="snakeGame">
+    The snake game is very basic. I make it crash when a score of 69 is reached. I played around with the sizing, fps, motion events, and much more.
+    In the end it was to help me practice basic Java skills by making a popular game.
 
-<string name="whatIWantToLearnAndGetMoreExperienceWith">
+</string>
+    <string name="whatIWantToLearnAndGetMoreExperienceWith">
         Implementing a variety of APIs \n
         The many widgets Android offers \n
         Libraries \n
         Architectures \n
         To fully understand the Android life cycle and fragments \n
         The exception cases and how to get around them \n
-        How to work remotely so I can work on vacation \n
-        To 100 percent all the free courses on codecademy so I learn basics of everything CS related \n
+        How to work remotely so I can work on vacation or when traveling \n
+        To finish with 100 percent all the free courses on codecademy so I learn basics of everything CS related \n
         Fluency in Java and Python \n
     </string>
 
-<string name="dreamCompanyToWorkFor">
+    <string name="dreamCompanyToWorkFor">
         \t\t I\'m looking for an opportunity where I can grow.
         Where my boss is respectable, knowledgeable, and well-communicated.
         A workplace where I am a valued asset.
@@ -169,8 +186,29 @@
         Puts an emphasis on continued education and the latest tech.
         Has a few company and team bonding events.
         Tasty and healthy food.
-        When I am asked- If you could go back in time,
-        and do anything you want with your current brain, would you do this again?
-        And if I answer yes without hesitation or thought, my dream is complete.
+        If I am ever asked, \"If you could go back in time,
+        and do anything you want with your current brain, would you do this again?\"
+        And if I answer yes without hesitation or thought, my dream  company is found.
 </string>
+    <string name="quotesILike">
+        We cannot change the cards we are dealt, just how we play the hand.
+        -Randy Pausch
+
+        Not all those who wander are lost.
+        -J.R.R. Tolkien
+
+        To the whole world your only one person but to one person you can be the whole world.
+        -Dr. Suess
+
+        Try to learn something about everything and everything about something.
+        -Thomas Huxley
+
+        Failure is the only opportunity to begin again. Only this time, more wisely.
+        -Uncle Iroh
+
+        It is important to draw wisdom from different places. If you take it from only one place it become rigid and stale.
+        -Uncle Iroh
+
+        I\'ll add more in the future
+      </string>
 </resources>

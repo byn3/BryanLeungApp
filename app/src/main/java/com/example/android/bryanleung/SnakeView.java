@@ -1,76 +1,68 @@
 package com.example.android.bryanleung;
 
 /**
- * Created by Byn on 7/27/2017.
+ * Created by byn on 7/27/2017.
  */
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.media.SoundPool;
-import android.support.v7.app.AppCompatActivity;
-import android.app.Activity;
 import android.graphics.Point;
-import android.os.Bundle;
-import android.view.Display;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-
 import java.util.Random;
 
 class SnakeView extends SurfaceView implements Runnable {
-    // Update the game 10 times per second
+    //update the game 12 times per second
     private final long FPS = 10;
-    // There are 1000 milliseconds in a second
+    //1000 milliseconds per second
     private final long MILLIS_IN_A_SECOND = 1000;
-    // The size in segments of the playable area
-    private final int NUM_BLOCKS_WIDE = 40;
-    // All the code will run separately to the UI
+    //size in segments of the playable area
+    private final int NUM_BLOCKS_WIDE = 35;
+    //code will run separately to the UI
     private Thread m_Thread = null;
-    // This variable determines when the game is playing
-    // It is declared as volatile because
-    // it can be accessed from inside and outside the thread
+    //this variable determines when the game is playing
+    //it is declared as volatile because
+    //it can be accessed from inside and outside the thread
     private volatile boolean m_Playing;
-    // This is what we draw on
+    //what we draw on
     private Canvas m_Canvas;
-    // This is required by the Canvas class to do the drawing
+    //this is required by the Canvas class to do the drawing
     private SurfaceHolder m_Holder;
-    // This lets us control colors etc
+    //gives access to colors
     private Paint m_Paint;
-    // This will be a reference to the Activity
+    //this will be a reference to the Activity
     private Context m_context;
-    // Sound
+    //sound but I don't use it
     private SoundPool m_SoundPool;
     private int m_get_mouse_sound = -1;
     private int m_dead_sound = -1;
-    // Start by heading to the right
+    //begin by heading to the right
     private Direction m_Direction = Direction.RIGHT;
-    // What is the screen resolution
+    //the screen resolution
     private int m_ScreenWidth;
     private int m_ScreenHeight;
-    // Control pausing between updates
+    //control pausing between updates
     private long m_NextFrameTime;
-    // We will draw the frame much more often
-    // The current m_Score
+    //draw the frame much more often
+    //current m_Score
     private int m_Score;
 
-    // The location in the grid of all the segments
+    //location in the grid of all the segments
     private int[] m_SnakeXs;
     private int[] m_SnakeYs;
 
-    // How long is the snake at the moment
+    //length of the snake
     private int m_SnakeLength;
 
-    // Where is the mouse
+    //mouse location
     private int m_MouseX;
     private int m_MouseY;
 
-    // The size in pixels of a snake segment
+    //size in pixels of a snake segment
     private int m_BlockSize;
     private int m_NumBlocksHigh; // determined dynamically
 
@@ -82,33 +74,33 @@ class SnakeView extends SurfaceView implements Runnable {
         m_ScreenWidth = size.x;
         m_ScreenHeight = size.y;
 
-        //Determine the size of each block/place on the game board
+        //determines the size of each block/place on the game board
         m_BlockSize = m_ScreenWidth / NUM_BLOCKS_WIDE;
-        // How many blocks of the same size will fit into the height
+        //how many blocks of the same size will fit into the height
         m_NumBlocksHigh = m_ScreenHeight / m_BlockSize;
 
-        // Set the sound up
+        //set the sound up
         //loadSound();
 
-        // Initialize the drawing objects
+        //initialize the drawing objects
         m_Holder = getHolder();
         m_Paint = new Paint();
 
-        // If you score 200 you are rewarded with a crash achievement!
-        m_SnakeXs = new int[200];
-        m_SnakeYs = new int[200];
+        //if you score this number you are rewarded with anapp crash
+        m_SnakeXs = new int[69];
+        m_SnakeYs = new int[69];
 
-        // Start the game
+        //start the game
         startGame();
     }
 
     @Override
     public void run() {
-        // The check for m_Playing prevents a crash at the start
-        // You could also extend the code to provide a pause feature
+        //check for m_Playing and prevents a crash at the start
+        //could also extend the code to make a pause feature
         while (m_Playing) {
 
-            // Update 10 times a second
+            //update variable # of times a second
             if (checkForUpdate()) {
                 updateGame();
                 drawGame();
@@ -122,7 +114,7 @@ class SnakeView extends SurfaceView implements Runnable {
         try {
             m_Thread.join();
         } catch (InterruptedException e) {
-            // Error
+            //error
         }
     }
 
@@ -133,18 +125,18 @@ class SnakeView extends SurfaceView implements Runnable {
     }
 
     public void startGame() {
-        // Start with just a head, in the middle of the screen
+        //start with just a head, in the middle of the screen
         m_SnakeLength = 1;
         m_SnakeXs[0] = NUM_BLOCKS_WIDE / 2;
         m_SnakeYs[0] = m_NumBlocksHigh / 2;
 
-        // And a mouse to eat
+        //spawn the food
         spawnMouse();
 
-        // Reset the m_Score
+        //reset the m_Score at start game
         m_Score = 0;
 
-        // Setup m_NextFrameTime so an update is triggered immediately
+        //setup m_NextFrameTime so an update is triggered immediately
         m_NextFrameTime = System.currentTimeMillis();
     }
 
@@ -177,8 +169,7 @@ class SnakeView extends SurfaceView implements Runnable {
     */
 
     private void eatMouse() {
-        //  Got one! Squeak!!
-        // Increase the size of the snake
+        //increase the size of the snake
         m_SnakeLength++;
         //replace the mouse
         spawnMouse();
@@ -188,18 +179,16 @@ class SnakeView extends SurfaceView implements Runnable {
     }
 
     private void moveSnake() {
-        // Move the body
+        //move the body
         for (int i = m_SnakeLength; i > 0; i--) {
-            // Start at the back and move it
-            // to the position of the segment in front of it
+            //start at the back and move it to the position in front of it
             m_SnakeXs[i] = m_SnakeXs[i - 1];
             m_SnakeYs[i] = m_SnakeYs[i - 1];
 
-            // Exclude the head because
-            // the head has nothing in front of it
+            //excludes the head because the head has nothing in front of it
         }
 
-        // Move the head in the appropriate m_Direction
+        //move the head in the appropriate m_Direction
         switch (m_Direction) {
             case UP:
                 m_SnakeYs[0]--;
@@ -220,7 +209,7 @@ class SnakeView extends SurfaceView implements Runnable {
     }
 
     private boolean detectDeath() {
-        // Has the snake died?
+        //has the snake died?
         boolean dead = false;
 
         // Hit a wall?
@@ -229,7 +218,7 @@ class SnakeView extends SurfaceView implements Runnable {
         if (m_SnakeYs[0] == -1) dead = true;
         if (m_SnakeYs[0] == m_NumBlocksHigh) dead = true;
 
-        // Eaten itself?
+        //eaten itself?
         for (int i = m_SnakeLength - 1; i > 0; i--) {
             if ((i > 4) && (m_SnakeXs[0] == m_SnakeXs[i]) && (m_SnakeYs[0] == m_SnakeYs[i])) {
                 dead = true;
@@ -240,7 +229,7 @@ class SnakeView extends SurfaceView implements Runnable {
     }
 
     public void updateGame() {
-        // Did the head of the snake touch the mouse?
+        //did the head of the snake touch the mouse?
         if (m_SnakeXs[0] == m_MouseX && m_SnakeYs[0] == m_MouseY) {
             eatMouse();
         }
@@ -250,27 +239,26 @@ class SnakeView extends SurfaceView implements Runnable {
         if (detectDeath()) {
             //start again
             //m_SoundPool.play(m_dead_sound, 1, 1, 0, 0, 1);
-
             startGame();
         }
     }
 
     public void drawGame() {
-        // Prepare to draw
+        //prepare to draw
         if (m_Holder.getSurface().isValid()) {
             m_Canvas = m_Holder.lockCanvas();
 
-            // Clear the screen with my favorite color
-            m_Canvas.drawColor(Color.argb(255, 120, 197, 87));
+            //clear the screen with a blue background
+            m_Canvas.drawColor(Color.argb(255,0 ,0 ,205 ));
 
-            // Set the color of the paint to draw the snake and mouse with
+            //set the color of the paint to draw the snake and mouse with, white
             m_Paint.setColor(Color.argb(255, 255, 255, 255));
 
-            // Choose how big the score will be
-            m_Paint.setTextSize(30);
-            m_Canvas.drawText("Score:" + m_Score, 10, 30, m_Paint);
+            //choose how big the score will be
+            m_Paint.setTextSize(50);
+            m_Canvas.drawText("Score:" + m_Score, 20, 50, m_Paint);
 
-            //Draw the snake
+            //draw the snake
             for (int i = 0; i < m_SnakeLength; i++) {
                 m_Canvas.drawRect(m_SnakeXs[i] * m_BlockSize,
                         (m_SnakeYs[i] * m_BlockSize),
@@ -293,63 +281,64 @@ class SnakeView extends SurfaceView implements Runnable {
 
     public boolean checkForUpdate() {
 
-        // Are we due to update the frame
+        //are we due to update the frame
         if (m_NextFrameTime <= System.currentTimeMillis()) {
-            // Tenth of a second has passed
+            //tenth of a second has passed
 
-            // Setup when the next update will be triggered
+            //setup when the next update will be triggered
             m_NextFrameTime = System.currentTimeMillis() + MILLIS_IN_A_SECOND / FPS;
 
-            // Return true so that the update and draw
-            // functions are executed
+            //return true so that the update and draw functions are executed
             return true;
         }
 
         return false;
     }
 
-    @Override
-    public boolean onTouchEvent(MotionEvent motionEvent) {
 
-        switch (motionEvent.getAction() & MotionEvent.ACTION_MASK) {
+    //handles the swiping up down left right motions
+    float prevX, prevY;
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                prevX = event.getX();
+                prevY = event.getY();
+
+                return true;
             case MotionEvent.ACTION_UP:
-                if (motionEvent.getX() >= m_ScreenWidth / 2) {
-                    switch (m_Direction) {
-                        case UP:
-                            m_Direction = Direction.RIGHT;
-                            break;
-                        case RIGHT:
-                            m_Direction = Direction.DOWN;
-                            break;
-                        case DOWN:
-                            m_Direction = Direction.LEFT;
-                            break;
-                        case LEFT:
-                            m_Direction = Direction.UP;
-                            break;
+                float newX = event.getX();
+                float newY = event.getY();
+                //Calculates where we swiped
+
+                if (Math.abs(newX - prevX) > Math.abs(newY - prevY)) {
+                    //LEFT - RiGHT Direction
+
+                    if (newX > prevX) {
+                        //RIGHT
+                        m_Direction = Direction.RIGHT;
+                    } else {
+                        //LEFT
+                        m_Direction = Direction.LEFT;
                     }
                 } else {
-                    switch (m_Direction) {
-                        case UP:
-                            m_Direction = Direction.LEFT;
-                            break;
-                        case LEFT:
-                            m_Direction = Direction.DOWN;
-                            break;
-                        case DOWN:
-                            m_Direction = Direction.RIGHT;
-                            break;
-                        case RIGHT:
-                            m_Direction = Direction.UP;
-                            break;
+                    // UP-DOWN Direction
+                    if (newY > prevY) {
+                        //DOWN
+                        m_Direction = Direction.DOWN;
+                    } else {
+                        //UP
+                        m_Direction = Direction.UP;
                     }
                 }
+
+                break;
         }
-        return true;
+        return false;
     }
 
-
-    //For tracking movement m_Direction
+    //for tracking movement m_Direction
     private enum Direction {
         UP, RIGHT, DOWN, LEFT
     }

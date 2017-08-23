@@ -5,53 +5,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#fbcc83"
     tools:context="com.example.android.bryanleung.PlacesVisited">
 
     <Button
-        style="@style/intentButton"
         android:id="@+id/button1"
-        android:text="Use Camera"
-        android:onClick="buttonClickFunction1"/>
+        style="@style/intentButton"
+        android:onClick="buttonClickFunction1"
+        android:text="@string/intentButton1" />
 
     <Button
-        style="@style/intentButton"
         android:id="@+id/button2"
-        android:text="Send Email to Me"
-        android:onClick="buttonClickFunction2"/>
+        style="@style/intentButton"
+        android:onClick="buttonClickFunction2"
+        android:text="@string/intentButton2" />
 
     <Button
-        style="@style/intentButton"
         android:id="@+id/button3"
-        android:text="See What I Live Next To"
-        android:onClick="buttonClickFunction3"/>
+        style="@style/intentButton"
+        android:onClick="buttonClickFunction3"
+        android:text="@string/intentButton3" />
 
     <Button
-        style="@style/intentButton"
         android:id="@+id/button4"
-        android:text="Send a Text"
-        android:onClick="buttonClickFunction4"/>
+        style="@style/intentButton"
+        android:onClick="buttonClickFunction4"
+        android:text="@string/intentButton4" />
 
     <Button
-        style="@style/intentButton"
         android:id="@+id/button5"
-        android:text="Call Me And Leave a Voicemail"
-        android:onClick="buttonClickFunction5"/>
+        style="@style/intentButton"
+        android:onClick="buttonClickFunction5"
+        android:text="@string/intentButton5" />
 
     <Button
-        style="@style/intentButton"
         android:id="@+id/button6"
-        android:text="Use Internet to Open an Imgur Album"
-        android:onClick="buttonClickFunction6"/>
+        style="@style/intentButton"
+        android:onClick="buttonClickFunction6"
+        android:text="@string/intentButton6" />
 
 
     <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_marginTop="20dp"
-        style="@style/intentButton"
-        android:text="@string/phoneIntentEnding" />
+        <TextView
+            style="@style/intentButton"
+            android:layout_marginTop="20dp"
+            android:text="@string/phoneIntentEnding" />
 
     </ScrollView>
 </LinearLayout>

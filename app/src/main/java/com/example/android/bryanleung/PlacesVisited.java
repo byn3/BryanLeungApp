@@ -1,27 +1,23 @@
 package com.example.android.bryanleung;
 
-import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
-import java.util.Locale;
 
 
 public class PlacesVisited extends AppCompatActivity implements View.OnClickListener {
 
+    //places visited is my phone intents activity
+    //the name is misleading but it was my initial goal for this page
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_places_visited);
-
+        //created 6 buttons that all have an onClick intent function
         Button one = (Button) findViewById(R.id.button1);
         one.setOnClickListener(this); //calls onclick method for button1
         Button two = (Button) findViewById(R.id.button2);
@@ -35,7 +31,7 @@ public class PlacesVisited extends AppCompatActivity implements View.OnClickList
         Button six = (Button) findViewById(R.id.button6);
         six.setOnClickListener(this); //calls onclick method for button 6
     }
-
+        //set a switch and cases for when each button is pressed
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
@@ -68,16 +64,16 @@ public class PlacesVisited extends AppCompatActivity implements View.OnClickList
                     SmsManager.getDefault().sendTextMessage(phoneNumber, null, messageToSend, null,null);
                     break;
                 case R.id.button5:
-                    //call me and leave a voice mail cause i wont pick up
-                    //i get so many fake calls or telemarketers. if it aint a number im expecting or a number i know i let it go to voice mail
-                    //if its an important message usually they just gotta say call me back and i will
+                    //call me and leave a voice mail cause I wont pick up random numbers
+                    //I get so many telemarketers calls and fake calls that just hang up when I answer
+                    //if its an important message usually they just gotta leave a voicemail and say call me back and I will
                     Uri BryansNumber= Uri.parse("tel:6504552948");
                     Intent intent5= new Intent(Intent.ACTION_DIAL, BryansNumber);
                     startActivity(intent5);
                     break;
                 case R.id.button6:
                     //I put some photos of me and my family online to test this
-                    Uri imgurURI = Uri.parse("http://imgur.com/a/evD64\n"); // missing 'http://' will cause crashed
+                    Uri imgurURI = Uri.parse("http://imgur.com/a/evD64\n"); //missing 'http://' will cause a crash
                     Intent intent = new Intent(Intent.ACTION_VIEW, imgurURI);
                     startActivity(intent);
                     break;

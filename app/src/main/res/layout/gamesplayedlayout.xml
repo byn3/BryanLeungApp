@@ -3,15 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
-    android:orientation="horizontal"
     android:minHeight="?android:attr/listPreferredItemHeight"
+    android:orientation="horizontal"
+    android:background="#7bff7d"
     android:padding="16dp">
 
     <ImageView
         android:id="@+id/gameCompanyIcon"
         android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@mipmap/ic_launcher"/>
+        android:layout_height="50dp" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -22,9 +22,9 @@
 
         <TextView
             android:id="@+id/gameCompanyName"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
 
     </LinearLayout>
 

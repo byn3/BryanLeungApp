@@ -13,64 +13,65 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * Created by Byn on 8/8/2017.
+ * Created by byn on 8/8/2017.
  */
 
 public class CustomSpinnerAdapter extends ArrayAdapter<String> {
 
+    //create global variables
+    public Resources res;
+    SpinnerModel tempValues = null;
+    LayoutInflater inflater;
     private Activity activity;
     private ArrayList data;
-    public Resources res;
-    SpinnerModel tempValues=null;
-    LayoutInflater inflater;
 
-    //customspinneradapterConstructor
-
+    //make a custom spinner adapter Constructor
     public CustomSpinnerAdapter(
             CustomSpinner activitySpinner,
             int textViewResourceId,
             ArrayList objects,
-            Resources resLocal)
-    {super(activitySpinner,textViewResourceId,objects);
-    //takes passed values
-        activity=activitySpinner;
-        data=objects;
-        res=resLocal;
+            Resources resLocal) {
+        super(activitySpinner, textViewResourceId, objects);
+        //takes passed values
+        activity = activitySpinner;
+        data = objects;
+        res = resLocal;
 
         //layout inflator to call external xml layout
-        inflater=(LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-    }
-    @Override
-    public View getDropDownView(int position,View convertView, ViewGroup parent){
-     return getCustomView(position,convertView,parent);
+        inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent){
-        return getCustomView(position,convertView,parent);
+    public View getDropDownView(int position, View convertView, ViewGroup parent) {
+        return getCustomView(position, convertView, parent);
     }
 
-    public View getCustomView(int position,View convertView,ViewGroup parent){
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        return getCustomView(position, convertView, parent);
+    }
+
+    public View getCustomView(int position, View convertView, ViewGroup parent) {
         //inflates contactsocialrows xml for each row
-        View row=inflater.inflate(R.layout.contactsocialrows,parent,false);
+        View row = inflater.inflate(R.layout.contactsocialrows, parent, false);
         //gets model object from array list
-        tempValues=null;
-        tempValues=(SpinnerModel)data.get(position);
+        tempValues = null;
+        tempValues = (SpinnerModel) data.get(position);
 
-        TextView socialName=(TextView)row.findViewById(R.id.socialText);
-        TextView socialURL=(TextView)row.findViewById(R.id.socialUsername);
-        ImageView logo=(ImageView)row.findViewById(R.id.socialImage);
+        //sets each view to the id given
+        TextView socialName = (TextView) row.findViewById(R.id.socialText);
+        TextView socialURL = (TextView) row.findViewById(R.id.socialUsername);
+        ImageView logo = (ImageView) row.findViewById(R.id.socialImage);
 
-        if(position==0){
+        if (position == 0) {
             //default spinner item
             socialName.setText("Please Select Media");
             socialURL.setText("");
-        }
-        else{
+        } else {
             //set values for each row of the spinner adapter
             socialName.setText(tempValues.getSocialMedia());
             socialURL.setText(tempValues.getURL());
-            logo.setImageResource(res.getIdentifier("com.example.android.bryanleung:mipmap/"+tempValues.getImage(),null,null));
+            logo.setImageResource(res.getIdentifier("com.example.android.bryanleung:mipmap/" + tempValues.getImage(), null, null));
         }
         return row;
     }

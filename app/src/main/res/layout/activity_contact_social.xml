@@ -4,39 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.bryanleung.CustomSpinner"
-    android:orientation="vertical">
-
-
+    android:orientation="vertical"
+    android:background="#feff97"
+    tools:context="com.example.android.bryanleung.CustomSpinner">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="24dp"/>
+        android:paddingTop="24dp" />
 
     <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/socialSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:drawSelectorOnTop="true"
-        android:prompt="@string/contactSocialSpinner">
-    </Spinner>
+        android:prompt="@string/contactSocialSpinner"></Spinner>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/belowSpinner"
-        android:paddingRight="8dp"
-        android:paddingLeft="8dp"
-        android:paddingTop="24dp"
-        android:paddingBottom="24dp"
-        android:textColor="#000000"
-        >
-    </TextView>
-
-    <TextView
-        android:text="@string/socialMediaEnding"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"/>
+        android:paddingBottom="24dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="24dp"
+        android:textColor="#000000"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="@string/socialMediaEnding" />
+
 </LinearLayout>

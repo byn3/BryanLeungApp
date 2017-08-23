@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.android.bryanleung.BryanLeung"
-    >
+    tools:context="com.example.android.bryanleung.BryanLeung">
 
     <TextView
         android:id="@+id/openingLine"
@@ -117,6 +116,14 @@
         </LinearLayout>
 
         <View style="@style/lineDivider"></View>
+
+        <TextView
+            android:id="@+id/closingLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/closingLineHome" />
 
     </LinearLayout>
 
