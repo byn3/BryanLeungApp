@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#fbcc83"
-    tools:context="com.example.android.bryanleung.PlacesVisited">
+    tools:context="com.bryanleung.PlacesVisited">
 
     <Button
         android:id="@+id/button1"

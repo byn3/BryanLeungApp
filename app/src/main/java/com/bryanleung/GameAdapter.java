@@ -1,4 +1,4 @@
-package com.example.android.bryanleung;
+package com.bryanleung;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
@@ -16,9 +16,9 @@ import java.util.ArrayList;
  * Created by byn on 8/2/2017.
  */
 
-public class GameAdapter extends ArrayAdapter<Game> {
+public class GameAdapter extends ArrayAdapter<com.bryanleung.Game> {
 
-    public GameAdapter(Activity context, ArrayList<Game> games) {
+    public GameAdapter(Activity context, ArrayList<com.bryanleung.Game> games) {
         // make the GameAdapter's internal storage for the context and the list.
         // the second argument is used when GameAdapter is populating a single TextView.
         // this is a custom adapter for two TextViews and an ImageView, the adapter is not
@@ -37,7 +37,7 @@ public class GameAdapter extends ArrayAdapter<Game> {
         }
 
         // Get the object located at this position in the list
-        Game currentGame = getItem(position);
+        com.bryanleung.Game currentGame = getItem(position);
 
         // Find the TextView in the games_played.xml layout with the ID gameCompanyName
         TextView gameTextView = (TextView) listItemView.findViewById(R.id.gameCompanyName);

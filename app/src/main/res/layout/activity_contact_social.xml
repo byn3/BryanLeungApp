@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#feff97"
-    tools:context="com.example.android.bryanleung.CustomSpinner">
+    tools:context="com.bryanleung.CustomSpinner">
 
     <TextView
         android:layout_width="match_parent"

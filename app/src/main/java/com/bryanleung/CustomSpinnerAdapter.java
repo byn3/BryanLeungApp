@@ -1,4 +1,4 @@
-package com.example.android.bryanleung;
+package com.bryanleung;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bryanleung.SpinnerModel;
 
 import java.util.ArrayList;
 
@@ -27,7 +29,7 @@ public class CustomSpinnerAdapter extends ArrayAdapter<String> {
 
     //make a custom spinner adapter Constructor
     public CustomSpinnerAdapter(
-            CustomSpinner activitySpinner,
+            com.bryanleung.CustomSpinner activitySpinner,
             int textViewResourceId,
             ArrayList objects,
             Resources resLocal) {

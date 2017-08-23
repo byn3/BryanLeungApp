@@ -1,4 +1,4 @@
-package com.example.android.bryanleung;
+package com.bryanleung;
 
 import android.app.Activity;
 import android.graphics.Point;
@@ -15,7 +15,7 @@ import android.view.Display;
 public class SnakeActivity extends AppCompatActivity {
 
     //declare an instance of SnakeView
-    SnakeView snakeView;
+    com.bryanleung.SnakeView snakeView;
 
     //initialize it in onCreate
     //once we have more details about the Player's device
@@ -31,7 +31,7 @@ public class SnakeActivity extends AppCompatActivity {
         display.getSize(size);
 
         //create a new View based on the SnakeView class
-        snakeView = new SnakeView(this, size);
+        snakeView = new com.bryanleung.SnakeView(this, size);
 
         //make snakeView the default view of the Activity
         setContentView(snakeView);

@@ -1,4 +1,4 @@
-package com.example.android.bryanleung;
+package com.bryanleung;
 
 /**
  * Created by byn on 8/8/2017.

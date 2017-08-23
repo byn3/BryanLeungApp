@@ -1,13 +1,12 @@
-package com.example.android.bryanleung;
+package com.bryanleung;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ListView;
 import android.widget.Toast;
 
-import static com.example.android.bryanleung.R.layout.bryanleung;
+import static com.bryanleung.R.layout.bryanleung;
 import static java.security.AccessController.getContext;
 
 public class BryanLeung extends AppCompatActivity {
@@ -24,7 +23,7 @@ public class BryanLeung extends AppCompatActivity {
 
     public void AboutMe(View view) {
         //opens about me
-        Intent i = new Intent(this, AboutMe.class);
+        Intent i = new Intent(this, com.bryanleung.AboutMe.class);
         startActivity(i);
     }
 

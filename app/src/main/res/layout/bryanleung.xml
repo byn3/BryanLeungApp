@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.android.bryanleung.BryanLeung">
+    tools:context="com.bryanleung.BryanLeung">
 
     <TextView
         android:id="@+id/openingLine"
