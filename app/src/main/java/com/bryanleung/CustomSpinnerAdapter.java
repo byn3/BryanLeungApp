@@ -73,7 +73,7 @@ public class CustomSpinnerAdapter extends ArrayAdapter<String> {
             //set values for each row of the spinner adapter
             socialName.setText(tempValues.getSocialMedia());
             socialURL.setText(tempValues.getURL());
-            logo.setImageResource(res.getIdentifier("com.example.android.bryanleung:mipmap/" + tempValues.getImage(), null, null));
+            logo.setImageResource(res.getIdentifier("com.bryanleung:mipmap/" + tempValues.getImage(), null, null));
         }
         return row;
     }

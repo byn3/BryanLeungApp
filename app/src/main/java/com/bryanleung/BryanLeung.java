@@ -4,13 +4,18 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
+import static com.bryanleung.R.id.bynURL1;
 import static com.bryanleung.R.layout.bryanleung;
 import static java.security.AccessController.getContext;
 
 public class BryanLeung extends AppCompatActivity {
     //this is my home screen of the app
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
