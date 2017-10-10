@@ -8,6 +8,8 @@ import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 
+import static android.R.attr.x;
+
 
 public class PlacesVisited extends AppCompatActivity implements View.OnClickListener {
 
@@ -57,12 +59,20 @@ public class PlacesVisited extends AppCompatActivity implements View.OnClickList
                     startActivity(intent3);
                     break;
                 case R.id.button4:
-                    //no intent sends a text
-                    //pretty much instant
-                    String phoneNumber = "6504552948";
+                    /*
+                    This code was useful but with sdk 23+ requires permission on runtimes so i downgraded the fuction to require less permissions and easier code.
+
+                    String phoneNumber = "16504552948";
                     String messageToSend = "Olive Juice. Here is my number. I want to hear your voice.";
                     SmsManager.getDefault().sendTextMessage(phoneNumber, null, messageToSend, null,null);
+                    */
+
+                    Intent intent4 = new Intent(Intent.ACTION_VIEW);
+                    intent4.setData(Uri.parse("sms:16504552948"));
+                    intent4.putExtra("sms_body", "Olive Juice. Here is my number. I want to hear your voice.");
+                    startActivity(intent4);
                     break;
+
                 case R.id.button5:
                     //call me and leave a voice mail cause I wont pick up random numbers
                     //I get so many telemarketers calls and fake calls that just hang up when I answer
@@ -74,8 +84,8 @@ public class PlacesVisited extends AppCompatActivity implements View.OnClickList
                 case R.id.button6:
                     //I put some photos of me and my family online to test this
                     Uri imgurURI = Uri.parse("http://imgur.com/a/evD64\n"); //missing 'http://' will cause a crash
-                    Intent intent = new Intent(Intent.ACTION_VIEW, imgurURI);
-                    startActivity(intent);
+                    Intent intent6 = new Intent(Intent.ACTION_VIEW, imgurURI);
+                    startActivity(intent6);
                     break;
             }
         }
